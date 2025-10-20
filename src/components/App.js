@@ -3,7 +3,7 @@ import "../styles/App.css";
 
 const Dream = ({name,description, Tag})=>{
   return <Tag>
-    <p data-ns-test="project-name" >{name}</p>
+    <p data-ns-test="project-name">{name}</p>
     <div data-ns-test="project-description">{description}</div>
   </Tag>
 }
@@ -36,7 +36,7 @@ const App = () => {
   ]);
 
   return <div id="main" className="ns-wrapper">
-    {dreams.map((dream,i)=> <Dream {...dream} Tag={`h${i+1}`}/>)}
+    {dreams.map((dream,i)=> <Dream key={i} {...dream} Tag={`h${i+1}`}/>)}
   </div>;
 };
 
